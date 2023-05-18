@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block tittle %} Muebles MAPE {% endblock %}</title>
+
+    {% load static %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    
+</head>
+<body>
+    {% block header %}
+        <nav>
+            <img src="{% static 'icons/icon_menu.svg'%}" alt="menu" class="menu">
+        
+            <div class="navbar-left">
+            <img src="{% static 'logos/logo_yard_sale.svg' %}" alt="logo" class="logo">
+        
+            <ul>
+                <li>
+                    <a href="{% url 'Home' %}">Inicio</a>
+                </li>
+                <li>
+                    <a href="{% url 'Tienda' %}">Tienda</a>
+                </li>
+                <li>
+                    <a href="{% url 'Servicio' %}">Servicios</a>
+                </li>
+                <li>
+                    <a href="{% url 'Contacto' %}">Contactenos</a>
+                </li>
+            </ul>
+            </div>
+        
+            <div class="navbar-right">
+            <ul>
+                <li class="navbar-email">platzi@example.com</li>
+                <li class="navbar-shopping-cart">
+                <img src="{% static 'icons/icon_shopping_cart.svg' %}" alt="shopping cart">
+                <div>666</div>
+                </li>
+            </ul>
+            </div>
+        
+            <div class="desktop-menu inactive">
+            <ul>
+                <li>
+                <a href="/" class="title">My orders</a>
+                </li>
+        
+                <li>
+                <a href="/">My account</a>
+                </li>
+        
+                <li>
+                <a href="/">Sign out</a>
+                </li>
+            </ul>
+            </div>
+        
+            
+        </nav>
+
+        <!-- ---------------- Menu Hamburguesa------------------------------ -->
+        <div class="mobile-menu inactive">
+        <ul>
+            <li>
+            <a href="/">Inicio</a>
+            </li>
+            <li>
+            <a href="/">Tienda</a>
+            </li>
+            <li>
+            <a href="/">Servicios</a>
+            </li>
+            <li>
+            <a href="/">Contactenos</a>
+            </li>
+            <li>
+        </ul>
+
+        <ul>
+            <li>
+            <a href="/">My orders</a>
+            </li>
+            <li>
+            <a href="/">My account</a>
+            </li>
+        </ul>
+
+        <ul>
+            <li>
+            <a href="/" class="email">platzi@example.com</a>
+            </li>
+            <li>
+            <a href="/" class="sign-out">Sign out</a>
+            </li>
+        </ul>
+        </div>
+        
+        <!-- -----------------------Carro compras-------------------------- -->
+        <aside class="product-detail inactive">
+        <div class="title-container">
+            <img src="{% static 'icons/flechita.svg' %}" alt="arrow">
+            <p class="title">My order</p>
+        </div>
+        
+        <div class="my-order-content">
+            <div class="shopping-cart">
+            <figure>
+                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+            </figure>
+            <p>Bike</p>
+            <p>$30,00</p>
+            <img src="{% static 'icons/icon_close.png' %}" alt="close">
+            </div>
+
+            <div class="order">
+            <p>
+                <span>Total</span>
+            </p>
+            <p>$560.00</p>
+            </div>
+
+            <button class="primary-button">
+            Checkout
+            </button>
+        </div>
+        </div>
+        </aside>    
+        <!-- <-------------------------------------------------------------- -->
+        <script src="{% static 'js/main.js' %}"></script>
+    {% endblock %}
+
+
+    {% block content %}
+        <h2>CONTENT</h2> 
+    {% endblock %}
+
+    {% block footer %}
+        <h3>FOOTER</h3>
+    {% endblock %}
+</body>
+</html>
