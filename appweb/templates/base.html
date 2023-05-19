@@ -8,6 +8,8 @@
     <title>{% block tittle %} Muebles MAPE {% endblock %}</title>
 
     {% load static %}
+    
+    <link rel="shortcut icon" href="{% static 'img/icon.png' %}">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     
 </head>
@@ -17,22 +19,22 @@
             <img src="{% static 'icons/icon_menu.svg'%}" alt="menu" class="menu">
         
             <div class="navbar-left">
-            <img src="{% static 'logos/logo_yard_sale.svg' %}" alt="logo" class="logo">
-        
-            <ul>
-                <li>
-                    <a href="{% url 'Home' %}">Inicio</a>
-                </li>
-                <li>
-                    <a href="{% url 'Tienda' %}">Tienda</a>
-                </li>
-                <li>
-                    <a href="{% url 'Servicio' %}">Servicios</a>
-                </li>
-                <li>
-                    <a href="{% url 'Contacto' %}">Contactenos</a>
-                </li>
-            </ul>
+                <img src="{% static 'img/iconav.png' %}" alt="logo" class="logo">
+            
+                <ul>
+                    <li class="navbar-left {% if request.path == '/' %} active {% endif %}">
+                        <a href="{% url 'Home' %}">Inicio</a>
+                    </li>
+                    <li class="navbar-left {% if request.path == '/tienda/' %} active {% endif %}">
+                        <a href="{% url 'Tienda' %}">Tienda</a>
+                    </li>
+                    <li class="navbar-left {% if request.path == '/servicios/' %} active {% endif %}">
+                        <a href="{% url 'Servicio' %}">Servicios</a>
+                    </li>
+                    <li class="navbar-left {% if request.path == '/contacto/' %} active {% endif %}">
+                        <a href="{% url 'Contacto' %}">Contactenos</a>
+                    </li>
+                </ul>
             </div>
         
             <div class="navbar-right">
