@@ -145,18 +145,21 @@ nav {
 
 /* Menu en mobile */
 .mobile-menu {
-  background-color: var(--white);
+  /* background-color: var(--white) ; */
+  background: #ffffffd3;
   position: absolute;
   top: 60px;
   left: 0;
-  width: 100%;
-  padding: 24px;
+  width: 76%;
+  padding: 0 24px 24px 24px;
+  
+  z-index: 1000;
 }
 .mobile-menu a {
   text-decoration: none;
   color: var(--black);
   font-weight: bold;
-  /* margin-bottom: 24px; */
+  font-size: var(--sm)
 }
 .mobile-menu ul {
   padding: 0;
@@ -167,7 +170,9 @@ nav {
   border-bottom: 1px solid var(--very-light-pink);
 }
 .mobile-menu ul li {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+  /* font-weight: bold; */
+  /* font-size: var(--md); */
 }
 .email {
   font-size: var(--s);
@@ -397,5 +402,6 @@ aside {
 @media (min-width: 641px) {
   .mobile-menu {
     display: none;
+    
   }
 }
