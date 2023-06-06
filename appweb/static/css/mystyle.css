@@ -7,10 +7,13 @@
     font-size: var(--lg);
     border-radius: 20px;
 }
+.width-icon{
+    width: 7rem;
+}
 
 .pie-pagina .grupo-2{
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
@@ -45,7 +48,7 @@
 .pie-pagina .grupo-1 .box h2{
     /* color: #fff; */
     /* margin-bottom: 25px; */
-    font-size: 20px;
+    font-size: var(--s);
 }
 .pie-pagina .grupo-1 .box p{
     /* color: #efefef; */
@@ -74,7 +77,11 @@
     color: #fff;
 }
 .pie-pagina .grupo-2 small{
-    font-size: 15px;
+    font-size: var(--s);
+}
+
+.text-fotter{
+    font-size: var(--md);
 }
 
 @media screen and (max-width:800px){
