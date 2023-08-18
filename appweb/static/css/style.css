@@ -10,6 +10,8 @@
   --md: 1.75rem;
   --m: 2rem;
   --lg: 2.35rem;
+  --xl: 2.4rem;
+  --title: 3.2rem;
 }
 
 *{
@@ -368,6 +370,16 @@ aside {
   color: var(--very-light-pink);
 }
 
+.text-title-service{
+  font-size: var(--title);
+  font-weight:  bold;
+  color: var(--black);
+}
+.text-service{
+  font-size: var(--lg);
+  /* font-weight:  bold; */
+  color: var(--black);
+}
 
 @media (max-width: 640px) {
   .menu {
